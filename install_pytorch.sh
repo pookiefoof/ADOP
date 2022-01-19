@@ -17,4 +17,5 @@ echo "Using g++-7"
 unset CUDA_HOME
 
 export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
+export nproc=16
 python setup.py install
