@@ -11,6 +11,8 @@ echo "Using g++-7"
 
 unset CUDA_HOME
 
+cd /data/ADOP
+
 mkdir build
 cd build
 export CONDA=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
