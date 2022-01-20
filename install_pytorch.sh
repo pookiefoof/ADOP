@@ -20,6 +20,8 @@ export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 export nproc=16
 python setup.py install
 
+cd /data
+
 wget https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protobuf-cpp-3.13.0.zip
 unzip protobuf-cpp-3.13.0.zip && cd protobuf-3.13.0
 ./autogen.sh
