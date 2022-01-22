@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git submodule update --init --recursive --jobs 0
+# git submodule update --init --recursive --jobs 0
 
 
 source $(conda info --base)/etc/profile.d/conda.sh
