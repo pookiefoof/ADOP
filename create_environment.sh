@@ -14,3 +14,12 @@ conda install -y cudnn=8.2.1.32 cudatoolkit-dev=11.2 cudatoolkit=11.2 -c nvidia 
 conda install -y astunparse numpy ninja pyyaml mkl mkl-include setuptools cmake=3.19.6 cffi typing_extensions future six requests dataclasses pybind11=2.6.2
 conda install -y magma-cuda110 -c pytorch
 conda install -y freeimage=3.17 jpeg=9d protobuf=3.13 -c conda-forge
+
+cd /data
+wget https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protobuf-cpp-3.13.0.zip
+unzip protobuf-cpp-3.13.0.zip && cd protobuf-3.13.0
+./autogen.sh
+./configure --prefix=/data/miniconda3/envs/adop 
+make -j$(nproc)
+make check
+make install && ldconfig
