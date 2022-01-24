@@ -22,4 +22,4 @@ unzip protobuf-cpp-3.13.0.zip && cd protobuf-3.13.0
 ./configure --prefix=/data/miniconda3/envs/adop 
 make -j$(nproc)
 make check
-make install && ldconfig
+make install
